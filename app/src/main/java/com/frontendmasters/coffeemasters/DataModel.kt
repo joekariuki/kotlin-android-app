@@ -6,6 +6,6 @@ class Product(var id: Int, var name: String, var price: Double,
     val imageUrl get() = "https://firtman.github.io/coffeematsers/api/images/${this.image}"
 }
 
-class Category(var name: String, products: MutableList<Product>)
+class Category(var name: String, var products: MutableList<Product>)
 
-class IteminCart(var product: Product, quantity: Int)
+class IteminCart(var product: Product, var quantity: Int)
