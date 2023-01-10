@@ -1,6 +1,6 @@
 package com.frontendmasters.coffeemasters
 
-class Product(var id: Int, var name: String, price: Double,
+class Product(var id: Int, var name: String, var price: Double,
         var image: String) {
 
     val imageUrl get() = "https://firtman.github.io/coffeematsers/api/images/${this.image}"
