@@ -27,7 +27,7 @@ fun App_Preview() {
 }
 
 @Composable
-fun App() {
+fun App(dataManager: DataManager) {
     var selectedRoute = remember {
         mutableStateOf(Routes.MenuPage.route)
     }
@@ -40,9 +40,9 @@ fun App() {
         },
         content = {
             when(selectedRoute.value) {
-                Routes.MenuPage.route -> MenuPage()
+                Routes.MenuPage.route -> MenuPage(dataManager)
                 Routes.OffersPage.route -> OffersPage()
-                Routes.OrderPage.route -> OrderPage()
+                Routes.OrderPage.route -> OrderPage(dataManager)
                 Routes.InfoPage.route -> InfoPage()
             }
         },
